@@ -11,6 +11,8 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 public class User {
 
+    private String id;
+
     @NotBlank
     private String name;
 
@@ -19,4 +21,6 @@ public class User {
 
     @NotBlank
     private String password;
+
+    private Role role;
 }

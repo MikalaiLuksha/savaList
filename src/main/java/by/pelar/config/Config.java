@@ -19,4 +19,13 @@ public class Config {
         return internalResourceViewResolver;
 
     }
+
+//    @Bean
+//    public void regDriver() {
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
