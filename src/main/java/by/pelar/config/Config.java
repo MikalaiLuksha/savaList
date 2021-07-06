@@ -1,10 +1,14 @@
 package by.pelar.config;
 
+        import by.pelar.entity.User;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.ComponentScan;
         import org.springframework.context.annotation.Configuration;
         import org.springframework.web.servlet.config.annotation.EnableWebMvc;
         import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+        import java.util.ArrayList;
+        import java.util.List;
 
 @Configuration
 @ComponentScan(basePackages = "by.pelar")
@@ -20,12 +24,9 @@ public class Config {
 
     }
 
-//    @Bean
-//    public void regDriver() {
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Bean
+    public List<User> userList (){
+        return new ArrayList<>();
+    }
+
 }
