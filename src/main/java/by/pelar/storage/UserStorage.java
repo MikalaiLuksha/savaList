@@ -2,11 +2,14 @@ package by.pelar.storage;
 
 import by.pelar.entity.User;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.sql.*;
 
-@Component
+@Service
 public class UserStorage {
+
+
 
     private Connection connection = null;
 
@@ -17,6 +20,7 @@ public class UserStorage {
     private final static String ADD_USER = "insert into userdata (id, name, login, password, role) values (default , ?, ?, ?, ?)";
     private final static String GET_USER_BY_LOGIN = "select * from userdata s where s.login = ?";
     private final static String GET_ALL_USER = "select * from userdata";
+
 
 //    static {
 //        try {
@@ -36,7 +40,7 @@ public class UserStorage {
             preparedStatement.setString(4, user.getRole().toString());
             preparedStatement.execute();
             connection.close();
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
