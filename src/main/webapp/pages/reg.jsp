@@ -8,14 +8,17 @@
     <div class="form-group text-light">
         <label for="Name2" class="w-25 p-1">Name</label>
         <spring:input class="form-control w-25 p-1" id="Name2" path="name"/>
+        <spring:errors path="name"/>
     </div>
     <div class="form-group text-light">
         <label for="inputLogin1" class="w-25 p-1">login</label>
         <spring:input class="form-control w-25 p-1" id="inputLogin1" path="login"/>
+        <spring:errors path="login"/>
     </div>
     <div class="form-group text-light">
         <label for="exampleInputPassword1" class="w-25 p-1">Password</label>
         <spring:input class="form-control w-25 p-1" id="exampleInputPassword1" path="password"/>
+        <spring:errors path="password"/>
     </div>
     <div class="mb-3">
     </div>
