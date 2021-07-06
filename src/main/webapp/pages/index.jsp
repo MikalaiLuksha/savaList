@@ -18,7 +18,7 @@
                             Enter or Registration
                         </c:if>
                         <c:if test="${sessionScope.key1}">
-                            ${sessionScope.currentUser.firstName}
+                            ${sessionScope.currentUser.name}
                         </c:if>
                     </button>
                 </p>
@@ -42,7 +42,7 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
         <c:if test="${!sessionScope.key1}">
-            <form class="px-4 py-3" action="/auth" method="post">
+            <form class="px-4 py-3" action="/user/auth" method="post">
                 <div class="mb-3">
                     <label for="exampleDropdownFormLogin" class="form-label">Login</label>
                     <input type="text" name="login" class="form-control w-25 p-1" id="exampleDropdownFormLogin"

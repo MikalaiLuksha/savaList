@@ -1,24 +1,33 @@
 package by.pelar.service;
 
 import by.pelar.entity.User;
-import by.pelar.storage.UserStorage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
 
-    private final UserStorage userStorage;
+    @Autowired
+    private List<User> userList;
 
-    public UserService(UserStorage userStorage) {
-        this.userStorage = userStorage;
-    }
 
     public void saveUser(User user){
-        userStorage.addUser(user);
+        userList.add(user);
     }
 
     public User checkAuth (User user){
-        return user;
+        for (User user1: userList) {
+            if (user1.getLogin().equals(user.getLogin())
+                    &
+                    user1.getPassword().equals(user.getPassword())
+            ){
+                return user1;
+            }
+
+        }
+        return null;
     }
 
 }
