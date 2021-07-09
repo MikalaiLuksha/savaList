@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="saveLiist:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/saveLiist_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="saveLiist" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.1.5.Final" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.4" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="saveLiist/web/Web" />
+    </root>
+  </artifact>
+</component>
