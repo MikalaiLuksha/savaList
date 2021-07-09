@@ -4,6 +4,7 @@ package by.pelar.config;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.ComponentScan;
         import org.springframework.context.annotation.Configuration;
+        import org.springframework.jdbc.datasource.DriverManagerDataSource;
         import org.springframework.web.servlet.config.annotation.EnableWebMvc;
         import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -27,6 +28,19 @@ public class Config {
     @Bean
     public List<User> userList (){
         return new ArrayList<>();
+    }
+
+
+    @Bean
+    public DriverManagerDataSource getDataSource() {
+
+        DriverManagerDataSource bds = new DriverManagerDataSource();
+        bds.setDriverClassName("org.postgresql.Drive");
+        bds.setUrl("jdbc:mysql://localhost:5432/dbname");
+        bds.setUsername("user");
+        bds.setPassword("pass");
+
+        return bds;
     }
 
 }
