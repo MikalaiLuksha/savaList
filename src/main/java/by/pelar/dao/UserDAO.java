@@ -16,7 +16,8 @@ private JdbcTemplate jdbcTemplate;
 private final static String SAVE_USER = "insert into userdata (name, login, password) values (?, ?, ?)";
 
     public void saveUser(User user){
-        jdbcTemplate.update(SAVE_USER, user.getName(), user.getLogin(), user.getPassword());
+//        jdbcTemplate.update(SAVE_USER, user.getName(), user.getLogin(), user.getPassword());
+        jdbcTemplate.update(SAVE_USER, "32", "df", "ds");
     }
 
 
